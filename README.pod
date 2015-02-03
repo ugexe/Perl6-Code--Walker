@@ -1,0 +1,47 @@
+=pod
+
+=encoding utf8
+
+=head1 Name
+
+Code::Walker
+
+=head1 Synopsis
+
+    use Code::Walker;
+
+    my $file   = $?FILE.IO;
+    my $source = $file.slurp;
+    my $*LINEPOSCACHE; 
+    my NQPMatch $tree = Perl6::Grammar.parse($source, :actions(Perl6::Actions.new()));
+    my QAST::CompUnit $ast = $tree.ast;
+
+    # for now...
+    my $w = Walker.new;
+    "$file.output".IO.spurt($w.walk($tree).output);
+
+=head1 Description
+
+Walk the p6/nqp parse/qast tree.
+
+=head1 Methods
+
+=over 8
+
+=item * I<walk(NQPMatch|QAST::CompUnit $obj)>
+
+Walks all nodes upwards from $node
+
+=back
+
+=head1 About
+
+Created with the intention of parsing dependencies out of perl6 code for Zef module installer.
+
+=head1 See Also
+
+L<NQPMatch|https://github.com/perl6/nqp/blob/master/src/QRegex/Cursor.nqp>
+
+L<QAST::CompUnit|https://github.com/perl6/nqp/blob/master/src/QAST/CompUnit.nqp>
+
+=cut

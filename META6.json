@@ -1,0 +1,14 @@
+{
+    "name"        : "Code::Walker",
+    "version"     : "*",
+    "description" : "Walk the p6/nqp parse/qast tree",
+    "depends"     : [ ],
+    "provides"    : [
+        "Code::Walker" : "lib/Code/Walker.pm6",
+        "Code::Walker::Base"     : "lib/Code/Walker/Base.pm6",
+        "Code::Walker::NQPMatch" : "lib/Code/Walker/NQPMatch.pm6",
+        "Code::Walker::QAST"     : "lib/Code/Walker/QAST.pm6"
+
+    ],
+    "source-url"    : "git://github.com/ugexe/Perl6-Code--Walker.git"
+}
