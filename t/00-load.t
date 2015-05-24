@@ -3,10 +3,10 @@ use Test;
 plan 1;
 
 subtest {
-    lives_ok { use Code::Walker::Basic    };
-    lives_ok { use Code::Walker::NQPMatch };
-    lives_ok { use Code::Walker::QAST     };
-    lives_ok { use Code::Walker           };
+    lives-ok { use Code::Walker::Basic    };
+    lives-ok { use Code::Walker::NQPMatch };
+    lives-ok { use Code::Walker::QAST     };
+    lives-ok { use Code::Walker           };
 }, "Sanity tests";
 
 done();
